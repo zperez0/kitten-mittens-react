@@ -1,13 +1,15 @@
 import React from "react";
+import Container from "react-bootstrap/Container";
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./Header";
-import Merch from "./Merch";
+import MerchControl from "./MerchControl";
 
 function App() {
   return (
-  <React.Fragment>
-    <Header />
-    <Merch />
-  </React.Fragment>
+    <Container>
+      <Header />
+      <MerchControl />
+    </Container>
   );
 }
 
