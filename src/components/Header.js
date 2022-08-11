@@ -1,8 +1,11 @@
 import React from "react";
+import wetcatImage from "./../img/wetcat.png";
 
-function Header(){
+function Header() {
   return (
-    <h1>Kitten Mittens</h1>
+    <React.Fragment>
+      <img src={wetcatImage} alt="wetcat" />
+    </React.Fragment>
   );
 }
 
