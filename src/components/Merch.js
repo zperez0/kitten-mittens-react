@@ -4,20 +4,24 @@ import PropTypes from "prop-types";
 function Merch(props) {
   return(
     <React.Fragment>
-      <h3>Check out these mittens</h3>
-      <p>{props.name}</p>
-      <p>{props.detail}</p>
-      <p>{props.price}</p>
-      <p>Quanity: {props.quanity}</p>
+      <div onClick ={() => props.whenMerchClicked(props.id)}>
+        <h2>{props.name}</h2>
+        <h3>{props.detail}</h3>
+        <h3>{props.price}</h3>
+        <h3>{props.quantity}</h3>
+        <hr/>
+      </div>
     </React.Fragment>
   );
 }
 
-Merch.prototypes = {
-  name: PropTypes.string,
-  detail: PropTypes.string,
-  price: PropTypes.number,
-  quanity: PropTypes.number
+Merch.propTypes = {
+  name: PropTypes.string.isRequired,
+  detail: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  quantity: PropTypes.number.isRequired,
+  id: PropTypes.string,
+  whenMerchClicked: PropTypes.func
 };
 
 export default Merch;
